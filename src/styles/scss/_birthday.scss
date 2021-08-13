@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #39393b;
+}
+#root {
+  margin: auto;
+  width: 500px;
+
+  .container {
+    // width: 50%;
+    background: #ff8552;
+    border-radius: 5rem 2em;
+    margin: 50px auto;
+    box-shadow: 0 0 20px 1px #bfd7ea;
+
+    h1 {
+      padding-right: 60px;
+      text-align: center;
+      letter-spacing: 2px;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        transition: 0.4s ease-in-out;
+        letter-spacing: 6px;
+      }
+      span {
+        color: rgba(255, 0, 0, 0.836);
+        font-size: 2rem;
+      }
+    }
+    section {
+      width: 800px;
+      display: flex;
+      padding: 15px 30px;
+      img {
+        width: 90px;
+        height: 90px;
+        transition: all 0.4s ease-in-out;
+        border-radius: 50% 35px;
+        &:hover {
+          box-shadow: 1px 1px 6rem 2px #42d409;
+          transition: all 0.4s ease-in-out;
+          border-radius: 35px 50%;
+        }
+      }
+      article {
+        padding: 20px 25px;
+        letter-spacing: 1.5px;
+        color: rgba(6, 17, 177, 0.8);
+        text-shadow: 0 0 15px rgb(161, 37, 37), 0 0 10px rgb(255, 255, 255);
+        h4 {
+          margin-bottom: 8px;
+          font-size: 1.2rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+    button {
+      display: inline-block;
+      font-size: 2rem;
+      position: relative;
+      inset: 100% 35%;
+      margin: 10px 0 10px;
+      padding: 10px 14px;
+      border: none;
+      background: #297373;
+      border-radius: 3rem 3rem 3rem 3rem;
+      transition: 0.4s ease-in-out;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      &:hover {
+        transition: 0.4s ease-in-out;
+        color: #e6e6e6;
+        cursor: pointer;
+        letter-spacing: 2.5px;
+        background: #000;
+      }
+    }
+  }
+}

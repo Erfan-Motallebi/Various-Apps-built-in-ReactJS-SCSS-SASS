@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@700&display=swap");
+
+$colorApis: (
+  bodyBgColor: #e8e46e,
+  navbarBgColor: #ffffff,
+  fbColor: #005792,
+  igColor: #ff449f,
+  twColor: #166c77,
+  linksColor: #053f96,
+  toggleColor: #1597bb,
+  linkBgColor: #1597bb,
+);
+
+$transitions: (
+  navLinksTransition: all 0.4s ease-in-out,
+  toggleTransition: all 0.4s ease-out,
+  socialTransition: all 0.2s ease-in-out,
+);
+
+$boxShadows: (
+  containerBoxShadow: 0 -10px 30px 0px #787a91,
+);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: map-get($map: $colorApis, $key: bodyBgColor);
+  font-family: "Martel", serif;
+}
+
+// Navbar Section
+
+.nav-container {
+  display: flex;
+  padding: 15px 10px;
+  background: map-get($map: $colorApis, $key: navbarBgColor);
+  justify-content: space-between;
+  box-shadow: map-get($boxShadows, containerBoxShadow);
+  .logo {
+    margin-top: 5px;
+    display: block;
+    font-size: 2rem;
+    span {
+      color: #166c77;
+      text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    }
+  }
+  .nav-toggle {
+    display: none;
+  }
+
+  .links-container {
+    // height: 0;
+    // overflow: hidden;
+    ul {
+      display: flex;
+      gap: 20px;
+      li {
+        list-style-type: none;
+        margin-top: 20px;
+        transition: map-get($map: $transitions, $key: navLinksTransition);
+        &:hover {
+          transform: scale(1.1);
+        }
+        a {
+          cursor: pointer;
+          color: map-get($map: $colorApis, $key: linksColor);
+          text-decoration: none;
+          padding: 15px;
+          font-size: 1.1rem;
+          transition: map-get($map: $transitions, $key: navLinksTransition);
+          &:hover {
+            background: map-get($map: $colorApis, $key: linkBgColor);
+            border-radius: 4px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .nav-socials {
+    font-size: 2rem;
+    margin: 11px 0 0 15px;
+    cursor: pointer;
+    .fb {
+      color: map-get($colorApis, fbColor);
+      transition: map-get($map: $transitions, $key: socialTransition);
+      &:hover {
+        color: lighten(map-get($colorApis, fbColor), 20%);
+        transform: scale(1.1);
+      }
+    }
+    .tw {
+      color: map-get($colorApis, twColor);
+      transition: map-get($map: $transitions, $key: socialTransition);
+      &:hover {
+        color: lighten(map-get($colorApis, twColor), 20%);
+        transform: scale(1.1);
+      }
+    }
+    .ig {
+      color: map-get($colorApis, igColor);
+      transition: map-get($map: $transitions, $key: socialTransition);
+      &:hover {
+        transform: scale(1.1);
+        color: lighten(map-get($colorApis, igColor), 20%);
+      }
+    }
+    ul {
+      display: flex;
+      gap: 15px;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}
+
+// Media Query
+
+@media screen and (max-width: 980px) {
+  .nav-container {
+    display: block;
+    padding: 10px 15px;
+    .logo {
+      display: none;
+    }
+    h1 {
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+      &:hover {
+        ::first-letter {
+          color: rgb(255, 0, 0);
+        }
+      }
+    }
+    .nav-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      .logo-toggle {
+        text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+        font-size: 2rem;
+        span {
+          color: #166c77;
+        }
+      }
+      .toggle-icon {
+        font-size: 2.5rem;
+        margin-top: 11px;
+        color: map-get($map: $colorApis, $key: toggleColor);
+        cursor: pointer;
+        transition: map-get($map: $transitions, $key: toggleTransition);
+        &.rotate {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    .links-container {
+      margin-bottom: 15px;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      transition: map-get($map: $transitions, $key: navLinksTransition);
+      &.links-show-container {
+        transition: map-get($map: $transitions, $key: navLinksTransition);
+        height: 17rem;
+      }
+      ul {
+        display: block;
+        li {
+          margin-top: 15px;
+          padding: 10px 0;
+          transition: map-get($map: $transitions, $key: navLinksTransition);
+          &:hover {
+            background: #166c77;
+            border-radius: 5px;
+            transform: none;
+            padding: 10px 15px;
+            a {
+              color: #ffffff;
+            }
+          }
+          a {
+            padding: 10px 0;
+            color: #000000;
+            font-size: 1.2rem;
+            transition: map-get($map: $transitions, $key: navLinksTransition);
+            &:hover {
+              background: none;
+            }
+          }
+        }
+      }
+    }
+    .nav-socials {
+      display: none;
+    }
+  }
+}

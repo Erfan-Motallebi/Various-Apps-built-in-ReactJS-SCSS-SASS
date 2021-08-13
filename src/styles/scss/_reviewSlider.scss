@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mate SC", Georgia, "Times New Roman", Times, serif;
+  background: #e6d5b8;
+}
+
+main {
+  width: 70%;
+  background: transparent;
+  height: 600px;
+  margin: 100px auto;
+  h1 {
+    text-align: center;
+  }
+  //  article Element - parent class of the sections
+  .container {
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 90%;
+    overflow: hidden;
+    // section Element - Children [ Direct child ]
+    section {
+      position: absolute;
+      transition: 0.5s ease-in-out;
+
+      // opacity: 0;
+      .img-box {
+        margin: 0 auto;
+        border: 4px solid #da723c;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin-top: 50px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+      .head-title {
+        position: relative;
+        text-align: center;
+        height: 60px;
+        span:first-child {
+          color: #8c0000;
+          font-size: 1.4rem;
+          font-weight: 600;
+          display: inline-block;
+          margin-bottom: 8px;
+        }
+
+        span:nth-of-type(2) {
+          text-transform: capitalize;
+        }
+      }
+      .quote-text {
+        padding: 50px 80px;
+        width: 85%;
+        margin: 0 auto;
+        text-align: justify;
+      }
+      .quote-icon {
+        position: absolute;
+        left: 50%;
+        font-size: 2.5rem;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    // slide classes
+    .activeSlide {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .nextSlide {
+      transform: translateX(100%);
+    }
+    .lastSlide {
+      // transition: 0.5s ease-in-out;
+      transform: translateX(-100%);
+    }
+    // next and prev button here
+    .next {
+      position: absolute;
+      left: 87%;
+      font-size: 3rem;
+      top: 50%;
+      padding: 8px;
+      background: #f48b29;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      padding: px;
+    }
+    .prev {
+      position: absolute;
+      cursor: pointer;
+      right: 87%;
+      top: 50%;
+      font-size: 3rem;
+      padding: 8px;
+      background: #f48b29;
+      border-radius: 0.3rem;
+      padding: px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    .container {
+      section {
+        .quote-text {
+          padding: 40px 60px;
+          width: 100%;
+        }
+        .quote-icon {
+          position: absolute;
+          left: 50%;
+          font-size: 2.5rem;
+          transform: translate(-50%, 0);
+        }
+      }
+      .next,
+      .prev {
+        font-size: 2rem;
+      }
+    }
+  }
+}

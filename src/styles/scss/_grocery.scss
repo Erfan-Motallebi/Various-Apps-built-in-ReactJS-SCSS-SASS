@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+@mixin btn {
+  letter-spacing: 2px;
+  outline-style: none;
+  padding: 6px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background: map-get($primaryColors, btnColor);
+  cursor: pointer;
+}
+
+$primaryColors: (
+  bodyBgColor: #f5f7b2,
+  btnColor: #65a1cc,
+  containerBgColor: #ffffff,
+  listBgColor: #e2d5d5,
+  editColor: #137909,
+  trashColor: #c70039,
+  trashHoverColor: #f21170,
+);
+
+$modals: (
+  modalBgColor: #a0937d,
+  emptyColor: rgb(124, 34, 34),
+  addColor: rgb(66, 202, 66),
+);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  background: map-get($primaryColors, bodyBgColor);
+}
+
+/**
+* @summary form container
+*/
+
+// Modal Container
+
+.modal-container {
+  width: 500px;
+  height: 100px;
+  margin: 20px auto;
+  .modal {
+    max-width: 420px;
+    text-align: center;
+    border: none;
+    border: none;
+    border-radius: 3px;
+    margin: 0 auto;
+    background: map-get($modals, modalBgColor);
+    &.edit,
+    &.remove,
+    &.removeAll {
+      background: map-get($primaryColors, modalBgColor);
+    }
+    &.empty {
+      background: map-get($map: $modals, $key: emptyColor);
+      color: rgb(223, 63, 42);
+    }
+    &.add {
+      background: map-get($map: $modals, $key: addColor);
+    }
+  }
+}
+
+.grocery-container {
+  width: 80%;
+  margin: 120px auto;
+  padding: 30px;
+  background: map-get($primaryColors, containerBgColor);
+}
+
+:first-child {
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .form-control {
+    text-align: center;
+    margin-top: 20px;
+    input[name|="item"] {
+      font-size: 1.5rem;
+      padding: 3.4px 20px;
+      width: 80%;
+      border-radius: 2px 0 0 2px;
+      border: 1px solid;
+      outline-style: none;
+      font-family: "Source Code Pro", monospace;
+      ::placeholder {
+        ::first-letter {
+          color: rgb(235, 32, 32);
+          text-transform: capitalize;
+        }
+      }
+    }
+    .btn {
+      @include btn;
+    }
+  }
+}
+
+// list container
+
+.list-container {
+  margin-top: 30px;
+  ul {
+    li {
+      list-style-type: none;
+      padding: 15px 20px;
+      width: 80%;
+      margin: 10px auto;
+      font-size: 1.2rem;
+      background: map-get($primaryColors, listBgColor);
+      border-radius: 3px;
+      display: flex;
+      justify-content: space-between;
+      :first-child {
+        letter-spacing: 1px;
+        &::first-letter {
+          font-weight: 700;
+          color: rgb(201, 42, 42);
+          text-transform: capitalize;
+        }
+      }
+      .trash {
+        font-size: 1.3rem;
+        margin-right: 5px;
+        color: map-get($map: $primaryColors, $key: trashColor);
+        cursor: pointer;
+        transition: 0.3s ease-out;
+        &:hover {
+          transition: 0.3s ease-in;
+          color: darken(map-get($primaryColors, editColor), 60%);
+        }
+      }
+      .edit {
+        margin-top: 5px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        color: map-get($map: $primaryColors, $key: editColor);
+        transition: 0.3s ease-in-out;
+        &:hover {
+          transition: 0.3s ease-in-out;
+          color: darken(map-get($primaryColors, editColor), 60%);
+        }
+      }
+    }
+  }
+  .btn {
+    @include btn;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+}

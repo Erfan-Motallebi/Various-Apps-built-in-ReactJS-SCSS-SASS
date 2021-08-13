@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #2f6f80;
+  font-family: Cairo, Georgia, "Times New Roman", Times, serif;
+}
+
+main {
+  width: 80%;
+  margin: 150px auto;
+  hr {
+    width: 140px;
+    margin: 0 auto;
+  }
+  .head-title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .container {
+    display: flex;
+    gap: 0 100px;
+    padding: 15px 5px;
+    .info {
+      margin: 5px 10px;
+      section {
+        h1 {
+          font-size: 1.8em;
+          transition: 0.4s ease-in-out;
+          &::first-letter {
+            color: #be0000;
+          }
+          &:hover {
+            letter-spacing: 1.2px;
+            transition: 0.4s ease-in-out;
+          }
+        }
+        h3 {
+          background: #b9b8aa;
+          max-width: 100px;
+          text-align: center;
+          padding: 3px 3px;
+          border-radius: 3px;
+          margin-bottom: 5px;
+          cursor: pointer;
+          transition: 0.4s ease-in-out;
+          &:hover {
+            transition: 0.4s ease-in;
+            filter: drop-shadow(-1px 1px 5px #d35811)
+              drop-shadow(1px -1px 5px #e9e4e0);
+          }
+        }
+        h4 {
+          color: #1a1802;
+          cursor: pointer;
+          border-radius: 2px;
+          text-align: center;
+          background: #ffa07a;
+          max-width: 200px;
+          &:hover {
+            transition: 0.4s ease-in;
+            filter: drop-shadow(-1px 1px 5px #d35811)
+              drop-shadow(1px -1px 5px #e9e4e0);
+          }
+        }
+        p {
+          display: flex;
+          margin: 15px;
+          gap: 0 50px;
+          .arrow {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+    .navbar {
+      padding: 20px 0px;
+      width: 150px;
+      section {
+        .btn {
+          border: none;
+          border-radius: 5rem;
+          width: 150%;
+          padding: 5px 15px;
+          font-size: 12px;
+          margin-bottom: 5px;
+          background: transparent;
+          text-align: start;
+          transition: 0.3s ease-in-out;
+          h2 {
+            text-align: center;
+          }
+          &:hover {
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+            border-left: 2px solid hsl(329, 100%, 79%);
+            border-right: 2px solid hsl(329, 100%, 79%);
+          }
+        }
+        .active-btn {
+          border-left: 2px solid hsl(329, 100%, 79%);
+          border-right: 2px solid hsl(329, 100%, 79%);
+        }
+      }
+    }
+  }
+  .more-info {
+    padding: 12px 24px;
+    border-radius: 0.2rem;
+    border: unset;
+    background: #b9b8aa;
+    display: block;
+    margin: 0 auto;
+    font-family: Cairo;
+    font-weight: 500 + 100;
+    transition: 0.4s ease-in-out;
+    &:hover {
+      background: #ffa07a;
+      transition: 0.6s ease-in-out;
+      cursor: pointer;
+      letter-spacing: 1px;
+      border-radius: 0.5rem;
+      filter: drop-shadow(5px 5px 50px #b9b8aa);
+    }
+  }
+}
+
+@media screen and (max-width: 1275px) {
+  main {
+    .container {
+      display: block;
+      .navbar {
+        display: flex;
+        min-width: 70%;
+        justify-content: space-between;
+        margin: 0 auto;
+        section {
+          .btn {
+            width: 120%;
+          }
+        }
+      }
+      .info {
+        section {
+          h1 {
+            text-align: center;
+          }
+          h3 {
+            margin: 0 auto;
+            margin-bottom: 5px;
+          }
+          h4 {
+            margin: 0 auto;
+          }
+          p {
+            margin-top: 10px;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  main {
+    .container {
+      .navbar {
+        display: flex;
+        min-width: 80%;
+        // margin-right: 180px;
+        section {
+          .btn {
+            font-size: 0.7rem;
+            width: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 501px) {
+  main {
+    .container {
+      .navbar {
+        margin-right: 70px;
+      }
+    }
+  }
+}

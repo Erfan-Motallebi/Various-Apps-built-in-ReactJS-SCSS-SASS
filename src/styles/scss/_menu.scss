@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-boxs;
+}
+
+body {
+  background: #d0bcd5;
+}
+
+.container {
+  margin: 150px auto;
+  .head {
+    text-align: center;
+    hr {
+      width: 70px;
+      height: 0.1rem;
+      background: #000;
+      margin: 10px auto;
+    }
+  }
+  .link {
+    padding: 10px 15px;
+    width: 300px;
+    margin: 0 auto;
+    a {
+      text-decoration: none;
+      padding: 5px 10px;
+      font-size: 1.2rem;
+      color: #534b62;
+      text-align: center;
+      transition: 0.4s ease-in-out;
+      display: inline-block;
+
+      &::first-letter {
+        text-transform: capitalize;
+        transition: 0.4s ease-in-out;
+        color: rgba(255, 0, 0, 0.5);
+      }
+      &:hover {
+        transition: 0.4s ease-in-out;
+        background: #226ce0;
+        border-radius: 0.5rem;
+        color: #ffffff;
+        letter-spacing: 2px;
+      }
+      :active {
+        background: #226ce0;
+      }
+    }
+  }
+  .box-model {
+    font-family: "Work Sans", Cambria, Cochin, Georgia, Times, "Times New Roman",
+      serif;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    section {
+      width: 45%;
+      display: flex;
+      .img-box {
+        width: 350px;
+        height: 200px;
+        border: 3px solid #534b62;
+        border-radius: 0.3rem;
+        transition: 0.5s ease-out;
+        img {
+          border-radius: 0.1rem;
+          display: block;
+          width: 300px;
+          height: 100%;
+        }
+        &:hover {
+          transition: 0.5s ease-out;
+          box-shadow: 1px 7px 40px 3px #1b1725, -1px -2px 20px 3px #a363b3;
+        }
+      }
+      .title {
+        margin-left: 15px;
+        h3 {
+          display: flex;
+          justify-content: space-between;
+          letter-spacing: 1px;
+          span {
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            padding: 3px;
+            background: #a499b3;
+            border-radius: 0.3rem;
+            transition: 0.5s ease-out;
+            &:hover {
+              transition: 0.5s ease-out;
+              background: #fff;
+              color: rgb(0, 0, 0);
+              cursor: pointer;
+            }
+          }
+        }
+        hr {
+          margin-top: 5px;
+        }
+        p {
+          margin: 40px 0 0 10px;
+          line-height: 1.8;
+          text-align: justify;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/**
+*  Media Section
+*/
+
+@media screen and (max-height: 1600px) {
+  .container {
+    .box-model {
+      section {
+        .title {
+          hr {
+            margin: 10px 0 10px 0;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    .box-model {
+      flex-direction: column;
+      align-items: center;
+      section {
+        width: 70%;
+        .title {
+          p {
+            padding: 10px;
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    .box-model {
+      flex-direction: column;
+      align-items: center;
+      section {
+        width: 60%;
+        .title {
+          hr {
+            margin-top: 5px;
+          }
+          p {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1091px) {
+  .container {
+    .head {
+    }
+    .box-model {
+      flex-direction: column;
+      align-items: flex-start;
+      section {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        .img-box {
+          img {
+            width: 100%;
+          }
+        }
+        .title {
+          margin: 6px;
+          width: 350px;
+          padding: 0;
+          hr {
+            margin-top: 15px 0 15px 0;
+          }
+          p {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    .head {
+    }
+    .box-model {
+      flex-direction: column;
+      align-items: flex-start;
+      section {
+        display: block;
+        margin: 0 40px;
+        .img-box {
+          img {
+            width: 100%;
+          }
+        }
+        .title {
+          width: 350px;
+          padding: 0;
+          margin: 5px;
+          p {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

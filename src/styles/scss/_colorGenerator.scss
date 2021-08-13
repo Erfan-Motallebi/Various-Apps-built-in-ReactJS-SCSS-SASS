@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+
+$colors: (
+  inputColor: #001e6c,
+  btnColor: #035397,
+  bodyColor: #d0cedd,
+  errorColor: #ff3f00,
+  rgbColor: #eeeeee,
+  weightColor: #a73489,
+  rgbShadow: #faff00,
+  copyColor: #339933,
+  exclamationColor: #4d0000,
+);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: map-get($map: $colors, $key: bodyColor);
+  font-family: "Assistant", sans-serif;
+}
+
+.container {
+  margin: 15px;
+  display: flex;
+  padding: 20px 25px;
+  .form-control {
+    .error {
+      border: 2px solid map-get($map: $colors, $key: errorColor);
+    }
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  input[name|="color"] {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border: none;
+    outline-style: none;
+    border: 2px solid #035397;
+    border-radius: 0.3rem 0 0 0.3rem;
+    &:focus {
+      border: 2px solid map-get($map: $colors, $key: inputColor);
+    }
+  }
+
+  .btn {
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    border-left: none;
+    outline-style: none;
+    border: none;
+    cursor: pointer;
+    background: map-get($map: $colors, $key: btnColor);
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
+}
+.color-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  article {
+    border-radius: 2px;
+    width: 300px;
+    height: 200px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    .rgb-color {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      color: map-get($map: $colors, $key: rgbColor);
+      .weight-color {
+        color: map-get($map: $colors, $key: weightColor);
+        font-weight: 700;
+      }
+      .rgb {
+        position: relative;
+        top: 57%;
+        width: 100px;
+        text-align: center;
+        background: inherit;
+        border: currentColor 0.2px solid;
+        border-left: none;
+        text-shadow: 0 0 8px grayscale($color: #8b3131);
+        border-radius: 2px;
+      }
+      .hidden {
+        opacity: 0;
+      }
+      .shown {
+        opacity: 1;
+      }
+      .icon {
+        position: relative;
+        left: 46%;
+        top: 32%;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: 0.3s ease-in;
+        z-index: 2;
+        &:hover {
+          transition: 0.6s ease-in-out;
+          filter: drop-shadow(0px 0px 5px rgb(80, 88, 209));
+        }
+      }
+      .copy {
+        border: 1px solid;
+        position: absolute;
+        left: 38%;
+        top: 37%;
+        width: 85px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 2px;
+        :first-child {
+          color: map-get($map: $colors, $key: copyColor);
+        }
+      }
+    }
+    &:hover {
+      transition: all 0.5s ease-in-out;
+      box-shadow: 1px 1px 10px 2px map-get($map: $colors, $key: rbgShadow),
+        -1px -1px 15px 7px map-get($map: $colors, $key: rbgShadow);
+      transform: scale(1);
+    }
+  }
+}

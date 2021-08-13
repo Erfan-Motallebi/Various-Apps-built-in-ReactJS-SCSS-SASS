@@ -1,0 +1,60 @@
+{
+  "tour-info": [
+    {
+      "id": 1,
+      "name": "best of Paris in 7 days",
+      "info": "Paris is famous for its cafe culture, the Eiffel Tower, the Louvre, Notre Dame, the Moulin Rouge, pastries, and fashion. Paris is known for having beauty, elegance, and for being a boldly romantic city. For each day of our Paris itinerary planner, we have outlined the sights that you can see in a day. That said, it’s an ambitious Paris tour itinerary that squeezes just about as much as possible into the time allotted. Designed for determined sightseers, travelers who want a less intense and more leisurely agenda should eliminate some sights. Your style of travel, time of visit (peak season vs. non-peak) and energy level will dictate how you create your absolute best Paris itinerary",
+      "image": "https://mindfultravelexperiences.com/wp-content/uploads/2018/05/paris-itinerary-for-7-days-header-768x512.webp",
+      "price": "1,958"
+    },
+    {
+      "id": 2,
+      "name": "best of Germany in 7 days",
+      "info": "Germany is well-known for their cold people but at the sametime perfect and kind. You could stay a day in Frankfurt (upon arrival), add another day for the Rhine in order to day-trip to Cologne from Bacharach, or add a stay in the quieter Mosel Valley. The Martin Luther towns (Erfurt and Wittenberg) and Leipzig fit well as midpoint stops if you're connecting Frankfurt or Nürnberg with Berlin or Dresden. Berlin merits several days more. Hamburg isn't on the way to anything in Germany, but it's a worthwhile detour to see a thriving, historic German port city.",
+      "image": "https://etramping.com/wp-content/uploads/2019/11/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Packing-List.jpg",
+      "price": "1,258"
+    },
+    {
+      "id": 3,
+      "name": "best of Thailand in 7 days",
+      "info": "Thailand is a delectable potpourri of city life, culture, quaint villages, temples, palaces, beaches and mountains. You require a month to soak in the vibrant vibe of this country. But what if you just have a week? Worry not! You can experience Thailand in a week too, provided you get smart with time management and do not stuff your itinerary. Key here is to embrace and dive into the places you visit. Visit fewer destinations but give them adequate time so they won’t seem like a blur when you come back home. And, here are some awesome itineraries to get started.",
+      "image": "https://www.traveldailymedia.com/assets/2020/09/shutterstock_1566472765.jpg",
+      "price": "1,558"
+    },
+    {
+      "id": 4,
+      "name": "best of Japan in 7 days",
+      "info": "Japan is one of the most enigmatic countries we’ve thus far visited. Our 7 days in Japan were spent visiting Tokyo and Kyoto, seeing incredible attractions,Even after several visits, Japan remains our favourite place in the world. So much so, that we decided to move to Tokyo and live in one of the most vibrant cities in the world. We understand planning 7 days in Japan could be overwhelming as there are so many things to do in the country, and this is why we put together a comprehensive guide on how to plan your first 7 day Japan itinerary. Grab a cup of tea and let’s start discussing what is the best way to spend a week in Japan.",
+      "image": "https://www.planetware.com/wpimages/2019/10/japan-in-pictures-most-beautiful-places-arashiyama-bamboo-grove-kyoto.jpg",
+      "price": "2,558"
+    },
+    {
+      "id": 5,
+      "name": "best of Iceland in 7 days",
+      "info": "Ireland is one of the country giving you the heaven in real life. 7 days in Ireland gives you time to comfortably see a good amount of the country. My 7 day Ireland itinerary takes you to three strategically-situated bases (Galway, Killarney, Dublin) for exploring the country. I personally followed this itinerary when I visited Ireland, which I carefully crafted from recommendations from my Irish social media followers. And, wow, it was just the perfect route for exploring Ireland! Of course, I always encourage travelers to forge their own path. So at the end I’ll give you suggestions for other road trip stops to consider.",
+      "image": "https://cdn.tourradar.com/s3/tour/1500x800/142098_5f51573699485.jpg",
+      "price": "2,158"
+    },
+    {
+      "id": 6,
+      "name": "best of Scotland in 7 days",
+      "info": "Scoland is one of the amazing country to visit. When people ask me what my favorite place I’ve ever traveled to is, I always say Scotland. There’s something about Scotland that just took me by surprise. It’s wild and green. Magic seems to seep from every inch of the Highlands, maybe it’s all the fairies up there in the Isle of Skye.The castles are beautiful, the people are friendly and the whiskey is good, sure, but there’s just something about Scotland that makes me daydream about throwing caution to the wind and booking flights back. Like right now. This second. YOLO.",
+      "image": "https://whimsysoul.com/wp-content/uploads/2019/08/Whimsy-Soul-Scotland-Itinerary-7-Days-Hogwarts-Train.jpg",
+      "price": "1,558"
+    },
+    {
+      "id": 7,
+      "name": "best of costa rica in 7 days",
+      "info": "Costa Rica is the best of two worlds. With a mix of rugged jungles, active volcanoes and world-class beaches, Costa Rica offers some of the best natural sights and experiences in the world, all conveniently packed into one territory. Almost a quarter of the land is preserved within national parks, allowing a wide range of animals and plants to flourish, making Costa Rica an ideal destination for ecotourism. With this itinerary, you'll discover the best attractions Costa Rica has to offer in just a week.",
+      "image": "https://media.gadventures.com/media-server/cache/14/81/148127c82966c4df2e737d3ffcceccb9.jpg",
+      "price": "1,958"
+    },
+    {
+      "id": 8,
+      "name": "best of Alaska in 7 days",
+      "info": "Alaska has an estimated 100,000 glaciers, ranging from tiny cirque glaciers to huge valley glaciers. If you’re a first time visitor to Alaska, we recommend a 7-day trip at minimum (if you can swing it!). You’ll have the opportunity to really explore some of Alaska’s scenic highlights, like the amazing national parks of Denali and Kenai Fjords; plus, you’ll have more time to meet some of the welcoming locals in Alaska’s quaint small towns—all without feeling rushed.Dri­ve Alaska’s most scenic high­ways through moun­tain pass­es and along the coast, stop­ping in charm­ing sea­side towns along the way. Glac­i­ers and whales in Kenai Fjords to tun­dra and steep moun­tains in Denali Nation­al Park. The clas­sic itinerary",
+      "image": "https://uploads.alaska.org/thumbnails/SEOmatic-Thumbnails/alaska.org.jpg",
+      "price": "1,958"
+    }
+  ]
+}
