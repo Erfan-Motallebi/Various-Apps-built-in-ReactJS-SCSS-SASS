@@ -14,13 +14,10 @@ function Navbar() {
 
   useEffect(() => {
     const linkRefHeight = ulLinkRef.current.getBoundingClientRect().height;
-    console.log(linkRefHeight);
     if (toggle) {
       listsContainerRef.current.style.height = `${linkRefHeight}px`;
-      console.log(listsContainerRef.current.style.height, "true");
     } else {
       listsContainerRef.current.style.height = 0 + "px";
-      console.log(listsContainerRef.current.style.height);
     }
   }, [toggle]);
   return (
