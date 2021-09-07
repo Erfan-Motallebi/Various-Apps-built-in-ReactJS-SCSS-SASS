@@ -10,7 +10,7 @@
 // import ColorGenerator from "./components/colorGenerator/ColorGenerator";
 // import Grocery from "./components/groceryList/Grocery";
 
-import Navbar from "./components/navbar/Navbar";
+// import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
       {/* <Generator /> */}
       {/* <ColorGenerator /> */}
       {/* <Grocery /> */}
-      <Navbar />
+      {/* <Navbar /> */}
     </>
   );
 }
